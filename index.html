@@ -3,25 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Minecraft вики — гайды по зельеварению, кастомным крафтам и другим механикам Minecraft.">
+    <meta name="description" content="Minecraft вики — гайды по зельеварению, кастомным крафтам, фермам и другим механикам Minecraft.">
+    <meta name="theme-color" content="#0f0f0f">
     <title>Minecraft вики — гайды и статьи</title>
+
+    <!-- Favicon: SVG-кубик Minecraft прямо в коде, отдельный файл не нужен -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230f0f0f'/><rect x='4' y='4' width='24' height='24' fill='%234caf50'/><rect x='8' y='8' width='6' height='6' fill='%232e7d32'/><rect x='18' y='8' width='6' height='6' fill='%232e7d32'/><rect x='8' y='18' width='6' height='6' fill='%232e7d32'/><rect x='18' y='18' width='6' height='6' fill='%232e7d32'/></svg>">
+
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
     <!-- Шапка сайта -->
     <header class="site-header">
         <div class="container header-inner">
+
+            <!-- QR-код слева -->
+            <div class="qr-left">
+                <img src="img/qr.png" alt="QR-код Minecraft вики" width="60" height="60">
+            </div>
+
             <a href="index.html" class="logo">
                 <img src="img/1.png" alt="Логотип Minecraft вики" width="60" height="60">
                 <span class="logo-text">Minecraft вики</span>
             </a>
 
+            <!-- Кнопка бургер-меню (видна только на мобильных) -->
+            <button class="burger" aria-label="Открыть меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <nav class="main-nav" aria-label="Основная навигация">
                 <ul>
                     <li><a href="#about">О нас</a></li>
                     <li><a href="#guides">Статьи</a></li>
+                    <li><a href="#features">Возможности</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
@@ -33,8 +52,55 @@
 
         <!-- Hero-блок -->
         <section class="hero" id="about">
-            <h1>Здравствуйте!</h1>
-            <p>Здесь собраны гайды по Minecraft: зельеварение, крафты, механики серверов и многое другое.</p>
+            <h1>Добро пожаловать в Minecraft вики!</h1>
+            <p>Здесь собраны гайды по Minecraft: зельеварение, кастомные крафты, фермы, редстоун-схемы, механики серверов и многое другое.</p>
+
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#guides">Смотреть гайды</a>
+                <a class="btn btn-outline" href="#contacts">Связаться</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <strong>50+</strong>
+                    <span>гайдов</span>
+                </div>
+                <div class="stat">
+                    <strong>12</strong>
+                    <span>категорий</span>
+                </div>
+                <div class="stat">
+                    <strong>2026</strong>
+                    <span>обновлено</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Преимущества -->
+        <section class="features" id="features">
+            <h2>Почему мы</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">📖</div>
+                    <h3>Понятные гайды</h3>
+                    <p>Пошаговые инструкции с примерами и скриншотами.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Актуально</h3>
+                    <p>Материалы обновляются под последние версии Minecraft.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>Для серверов</h3>
+                    <p>Учитываем кастомные крафты и механики анархий.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Без воды</h3>
+                    <p>Только то, что реально пригодится в игре.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Гайды + боковая панель -->
@@ -51,8 +117,32 @@
                     </article>
 
                     <article class="card">
-                        <h3>Кастомные крафты на серверах</h3>
+                        <h3>Кастомные крафты</h3>
                         <p>Как выглядят большинство кастомных крафтов на анархиях и как их быстро освоить.</p>
+                        <a class="btn" href="#">Читать далее</a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Фермы ресурсов</h3>
+                        <p>Автоматические фермы: железо, золото, еда, опыт — с объяснением принципов.</p>
+                        <a class="btn" href="#">Читать далее</a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Редстоун-схемы</h3>
+                        <p>Базовые и продвинутые схемы на редстоуне: двери, ловушки, таймеры.</p>
+                        <a class="btn" href="#">Читать далее</a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Зачарования</h3>
+                        <p>Какие энчанты ставить на броню, оружие и инструменты в 2026 году.</p>
+                        <a class="btn" href="#">Читать далее</a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Выживание с нуля</h3>
+                        <p>Первые дни на сервере: как быстро встать на ноги и не умереть.</p>
                         <a class="btn" href="#">Читать далее</a>
                     </article>
                 </div>
@@ -61,21 +151,100 @@
             <aside class="sidebar">
                 <h2>Скоро их будет больше</h2>
                 <p>Мы готовим новые материалы: фермы, редстоун-схемы, энчанты и обзоры обновлений.</p>
+
+                <h3>Популярное</h3>
+                <ul class="sidebar-list">
+                    <li><a href="zelya.html">Зельеварение для новичков</a></li>
+                    <li><a href="#">Топ-10 кастомных крафтов</a></li>
+                    <li><a href="#">Ферма железа без мод-блоков</a></li>
+                </ul>
+
+                <h3>Теги</h3>
+                <div class="tags">
+                    <span class="tag">зелья</span>
+                    <span class="tag">крафты</span>
+                    <span class="tag">фермы</span>
+                    <span class="tag">редстоун</span>
+                    <span class="tag">энчанты</span>
+                    <span class="tag">сервера</span>
+                </div>
             </aside>
 
         </div>
+
+        <!-- FAQ -->
+        <section class="faq" id="faq">
+            <h2>Частые вопросы</h2>
+
+            <details>
+                <summary>Подойдут ли гайды для новичков?</summary>
+                <p>Да, большинство материалов рассчитано на игроков с нуля. Мы объясняем каждый шаг.</p>
+            </details>
+
+            <details>
+                <summary>На каких версиях Minecraft работают крафты?</summary>
+                <p>Мы указываем версию в каждой статье. Основная часть — 1.20+ и кастомные серверные механики.</p>
+            </details>
+
+            <details>
+                <summary>Можно ли предложить свою тему?</summary>
+                <p>Конечно! Напишите нам на почту — мы добавим интересные темы в план.</p>
+            </details>
+        </section>
+
     </main>
 
     <!-- Подвал -->
     <footer class="site-footer" id="contacts">
         <div class="container footer-inner">
-            <div>
-                <h2>Контакты</h2>
-                <p>Свяжитесь с нами: <a href="mailto:info@example.com">info@example.com</a></p>
+
+            <div class="footer-col">
+                <h2>Minecraft вики</h2>
+                <p>Гайды, статьи и разборы механик Minecraft.</p>
             </div>
-            <p class="copyright">&copy; 2026 Minecraft вики. Все права защищены.</p>
+
+            <div class="footer-col">
+                <h3>Разделы</h3>
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#guides">Статьи</a></li>
+                    <li><a href="#features">Возможности</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Контакты</h3>
+                <p>Почта: <a href="mailto:info@example.com">info@example.com</a></p>
+                <p>Discord: <a href="#">discord.gg/example</a></p>
+            </div>
+
+        </div>
+
+        <div class="container copyright">
+            <p>&copy; 2026 Minecraft вики. Все права защищены.</p>
         </div>
     </footer>
+
+    <!-- Скрипт для бургер-меню -->
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.main-nav');
+
+        burger.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            burger.classList.toggle('active', isOpen);
+            burger.setAttribute('aria-expanded', isOpen);
+        });
+
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                burger.classList.remove('active');
+                burger.setAttribute('aria-expanded', false);
+            });
+        });
+    </script>
 
 </body>
 </html>
